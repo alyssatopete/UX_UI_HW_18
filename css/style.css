@@ -2,21 +2,28 @@
 body {
     background-color: white;
 }
-.header{
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
+
+header.navigation{
+    margin: 0 auto
+}
+
 .inline-block{
     display: inline-block;
     vertical-align: top;
 }
-div.logo{
-    width: 23%;
-    padding: 1%;
-}
 
+.logo{
+    width: 100px;
+    height: 100px;
+    padding: 10px 0;
+    float: left;
+}
 
 .navigation {
     width: 73%;
@@ -24,11 +31,25 @@ div.logo{
 
 }
 
-nav.inline-block{
-    width: 50%;
-   margin-right: 0 auto;
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+color: rgb(66, 66, 66);
+text-decoration: none;
+}
+
+nav a:hover{
+    color: #000
+}
 
 .heroImg {
     height: 600px;
@@ -46,7 +67,7 @@ button{
     background-color: black;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 22px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -68,7 +89,7 @@ li {
    float: left;
    padding: 8px;
 }
-h1{
+h1.workGrid{
     text-align: center;
     padding: 20px;
 }
@@ -105,15 +126,3 @@ img{
     align-items: center;
 }
 
-div.workGrid{
-    display: grid;
-    grid-template-rows: auto auto auto;
-    justify-content: center;
-}
-
-@media only screen and (max-width:600){
-    }
-    div.workGrid{
-        display: grid;
-        grid-template-rows: 300px 300px 300px;
-    }
